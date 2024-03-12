@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+<body>
+<form action="/hospitals" method="GET">
+    <table>
+        <th>id</th>
+        <th>Name</th>
+        <th>Country</th>
+        <th>City</th>
+    {% for el in info %}
+    <tr>
+        <td>{{el.id}}</td>
+        <td>{{el.name}}</td>
+        <td>{{el.country}}</td>
+        <td>{{el.city}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</form>
+</body>
+</html>

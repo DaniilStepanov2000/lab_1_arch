@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<form action="/logistic_companies" method="GET">
+    <table>
+        <th>id</th>
+        <th>Name</th>
+        <th>Product types</th>
+        <th>Rating</th>
+    {% for el in info %}
+    <tr>
+        <td>{{el.id}}</td>
+        <td>{{el.name}}</td>
+        <td>{{el.product_types}}</td>
+        <td>{{el.rating}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<form action="/hospitals" method="GET">
+    <table>
+        <th>id</th>
+        <th>Address</th>
+        <th>Country</th>
+        <th>City</th>
+        <th>Count employees</th>
+    {% for el in info %}
+    <tr>
+        <td>{{el.id}}</td>
+        <td>{{el.address}}</td>
+        <td>{{el.country}}</td>
+        <td>{{el.city}}</td>
+        <td>{{el.count_employees}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</form>
+<a href="/add_hospitals">Add hospitals</a>
+<a href="/delete_hospitals">Delete hospitals</a>
+<a href="/update_hospitals">Update hospitals</a>
+
+</body>
+</html>
